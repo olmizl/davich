@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Davichi</title>
+    <script src="mobile-detect.min.js"></script>
+  </head>
+  <body>
+    <script>
+      const md = new MobileDetect(window.navigator.userAgent);
+      // console.log(md.mobile()); null은 false, undefined false,0
+      if (md.mobile()) {
+        //여기는 모바일로 접속했다.
+        location.href = "m";
+      } else {
+        // 여기는 pc로 접속했다.
+        location.href = "pc";
+      }
+    </script>
+  </body>
+</html>
